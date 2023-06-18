@@ -25,7 +25,7 @@ const char* mqttTopicQuery = "sensor/all_data";
 const char* mqttTopicData = "sensor/table";
 
 // API URL
-const char* serverName = "https://192.168.28.73:5000/runs";
+const char* serverName = "https://final-project-sistem-berbasis-mikroprosessor.vercel.app/runs";
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
