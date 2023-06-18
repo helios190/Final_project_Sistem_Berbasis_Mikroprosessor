@@ -296,7 +296,7 @@ function onSubmitRun() {
   var runInput = document.getElementById('run').value; 
 
   // Construct the API URL with the parameter
-  var apiUrl = 'https://sbm-api-seven.vercel.app/runs/' + encodeURIComponent(runInput);
+  var apiUrl = 'https://final-project-sistem-berbasis-mikroprosessor.vercel.app/runs/' + encodeURIComponent(runInput);
 
   fetch(apiUrl)
     .then(function(response) {
