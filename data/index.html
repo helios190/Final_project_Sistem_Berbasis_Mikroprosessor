@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESP IOT DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <h1>esp32 Web Server</h1>
+    </div>
+    <div class="content">
+      <div class="card-grid">
+        <div class="card">
+          <p class="card-title">Distance</p>
+          <canvas id="gauge-potentiometer"></canvas>
+        </div>
+        <div class="card">
+          <p class="card-title">Temperature</p>
+          <canvas id="gauge-temperature"></canvas>
+        </div>
+        <div class="card">
+          <p class="card-title">Humidity</p>
+          <canvas id="gauge-humidity"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="cards">
+        <div class="card">
+          <p class="card-title">GYROSCOPE</p>
+          <p><span class="reading">X: <span id="gyroX"></span> rad</span></p>
+          <p><span class="reading">Y: <span id="gyroY"></span> rad</span></p>
+          <p><span class="reading">Z: <span id="gyroZ"></span> rad</span></p>
+        </div>
+        <div class="card">
+          <p class="card-title">ACCELEROMETER</p>
+          <p><span class="reading">X: <span id="accX"></span> ms<sup>2</sup></span></p>
+          <p><span class="reading">Y: <span id="accY"></span> ms<sup>2</sup></span></p>
+          <p><span class="reading">Z: <span id="accZ"></span> ms<sup>2</sup></span></p>
+        </div>
+      </div>
+      <div class="cube-content">
+        <div id="3Dcube"></div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <p class="card-title">3D ANIMATION</p>
+          <button id="reset" onclick="resetPosition(this)">RESET POSITION</button>
+          <button id="resetX" onclick="resetPosition(this)">X</button>
+          <button id="resetY" onclick="resetPosition(this)">Y</button>
+          <button id="resetZ" onclick="resetPosition(this)">Z</button>
+        </div>
+        <div class="card">
+          <p class="card-title">RECORDING</p>
+          <button id="start" onclick="startRecording(this)">START</button>
+          <button id="stop" onclick="stopRecording(this)">STOP</button>
+        </div>
+      </div>
+      <div class="cards" style="margin-top: 20px;">
+        <form class="mt-5" onsubmit="return onSubmitRun()">
+          <label for="Run">Run:</label>
+          <input type="text" id="run" name="run" required> 
+          <button type="submit">Get</button>
+        </form>
+      </div>
+      <div class="table-container" style="margin-top: 20px;">
+        <table id="runTable" style="display: none;">
+          <thead>
+            <tr>
+              <th style="width: 100px;">Temperature</th>
+              <th style="width: 100px;">Humidity</th>
+              <th style="width: 100px;">Distance</th>
+              <th style="width: 100px;">Gyro</th>
+              <th style="width: 100px;">Run</th>
+              <th style="width: 100px;">Timestamp</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <p> Axel Xaverius Tamtama  21/479414/TK/52892</p>
+      <p> Rafly Zaki Ramadhan  21/483121/TK/53403</p>
+      <p> Franciscus Marselino Handoyo  21/474984/TK/52444</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+html {
+  font-family: Arial, Helvetica, sans-serif; 
+  display: inline-block; 
+  text-align: center;
+}
+h1 {
+  font-size: 1.8rem; 
+  color: white;
+}
+p { 
+  font-size: 1.4rem;
+}
+.topnav { 
+  overflow: hidden; 
+  background-color: #0A1128;
+}
+body {  
+  margin: 0;
+}
+.content { 
+  padding: 5%;
+}
+.card-grid { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  display: grid; 
+  grid-gap: 2rem; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card { 
+  background-color: white; 
+  box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+  min-height: 200px;
+}
+.card-title { 
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #034078
+}
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid; grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.reading {
+  font-size: 1.2rem;
+}
+.cube-content{
+  width: 100%;
+  background-color: white;
+  height: 300px; margin: auto;
+  padding-top:2%;
+}
+.form-container {
+  margin-bottom: 20px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+}
+.form-input {
+  padding: 5px;
+}
+.form-button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+.table th {
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+#reset{
+  border: none;
+  color: #FEFCFB;
+  background-color: #003366;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px; width: 150px;
+  border-radius: 4px;
+}
+#resetX, #resetY, #resetZ{
+  border: none;
+  color: #FEFCFB;
+  background-color: #003366;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  width: 20px;
+  border-radius: 4px;
+}
+#start{
+  border: none;
+  color: #000000;
+  background-color: #1df500;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px; width: 100px;
+  border-radius: 4px;
+}
+#stop{
+  border: none;
+  color: #000000;
+  background-color: #f50000;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px; width: 100px;
+  border-radius: 4px;
+}
